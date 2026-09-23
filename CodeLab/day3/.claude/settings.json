@@ -1,12 +1,12 @@
 {
   "statusLine": {
     "type": "command",
-    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File C:/Users/Samit/.claude/statusline.ps1"
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File ./.claude/statusline.ps1"
   },
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": "Stop",
+        "matcher": "Bash|PowerShell",
         "hooks": [
           {
             "type": "command",
@@ -17,7 +17,7 @@
               "-ExecutionPolicy",
               "Bypass",
               "-File",
-              "${CLAUDE_PROJECT_DIR}/.claude/hooks/block-rm.ps1"
+              "${CLAUDE_PROJECT_DIR}/hooks/block-rm.ps1"
             ]
           },
           {
@@ -29,7 +29,7 @@
               "-ExecutionPolicy",
               "Bypass",
               "-File",
-              "${CLAUDE_PROJECT_DIR}/.claude/hooks/block-rm.ps1"
+              "${CLAUDE_PROJECT_DIR}/hooks/block-rm.ps1"
             ]
           }
         ]
