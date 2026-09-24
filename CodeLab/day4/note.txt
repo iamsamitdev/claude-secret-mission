@@ -13,7 +13,7 @@ Step 1: grill
 
 Step 2: design
 ---
-/plan จากไฟล์ @borrow-buddy\CONTEXT.md และ @borrow-buddy\CLAUDE.md  คุณช่วยเขียนไฟล์ design.md สำหรับงานนี้ โดยสอบถามความต้องการฉันเป็นข้อๆ ให้ฉันตอบ
+/plan จากไฟล์ @borrow-buddy\CONTEXT.md คุณช่วยเขียนไฟล์ design.md สำหรับงานนี้ โดยสอบถามความต้องการฉันเป็นข้อๆ ให้ฉันตอบ
 
 Step 3: task.md
 ---
