@@ -1,0 +1,36 @@
+===
+1. First Project
+===
+/grill-with-docs @old_web\ ฉันอยากเปลี่ยนหน้าเว็บไซต์นี้ให้เป็น landing page แบบ modern โดยใช้ tailwind css
+  และหาภาพตัวอย่างใหม่จากเว็บฟรีมาประกอบให้ดูลงตัวสวยงาม ช่วยถามความต้องการฉันมาทีละข้อให้ตอบ
+
+===
+2. Second Project
+===
+Step 1: grill
+---
+/grill-with-docs ผมอยากทำเว็บบันทึกของที่ให้เพื่อนยืม บันทึกว่าใครยืมอะไร เมื่อไร ต้องคืนเมื่อไร และกดว่าคืนแล้วได้ ช่วยซักถามผมทีละข้อจนศัพท์และขอบเขตชัด แล้วสรุปลง CONTEXT.md ห้ามเขียนโค้ด โปรเจ็กต์ใหม่นี้จะสร้างทุกอย่างในโฟลเดอร์ borrow-buddy
+
+Step 2: design
+---
+/plan จากไฟล์ @borrow-buddy\CONTEXT.md และ @borrow-buddy\CLAUDE.md  คุณช่วยเขียนไฟล์ design.md สำหรับงานนี้ โดยสอบถามความต้องการฉันเป็นข้อๆ ให้ฉันตอบ
+
+Step 3: task.md
+---
+อ่าน @borrow-buddy\@CONTEXT.md และ @borrow-buddy\@design.md แล้ววางแผนสร้างไฟล์ Tasks.md สำหรับการ implement ต่อไป
+
+Step 4: git manage with sub agent
+---
+สร้าง subagent สำหรับ git management
+
+[ออกจาก claude /exit แล้วเข้าใหม่]
+
+Step 5: use git manager subagent
+---
+ใช้ git-manager ในการจัดการงานเกี่ยวกับ git
+ทำการ initial git repository โปรเจ็กต์ @borrow-buddy
+สร้าง .gitignore และ commit แรกได้เลยครับ
+
+Step 6: implement tasks
+---
+เริ่มสร้างโปรเจ็กต์ Next.js ตาม Tasks.md เมื่อเสร็จแต่ละ task ให้ทำการ git commit ไว้ด้วย
