@@ -33,4 +33,8 @@ Step 5: use git manager subagent
 
 Step 6: implement tasks
 ---
-เริ่มสร้างโปรเจ็กต์ Next.js ตาม Tasks.md เมื่อเสร็จแต่ละ task ให้ทำการ git commit ไว้ด้วย
+เริ่มสร้างโปรเจ็กต์ Tasks.md เมื่อเสร็จแต่ละ task ให้ทำการ git commit ไว้ด้วย
+
+Step 7: Handoff
+---
+วันนี้เอาไว้เท่านี้ก่อน ก่อนจะจากกันใน session นี้ ให้คุณช่วยเขียนสรุป handoff markdown file งานนี้ไว้ให้ทำงานต่อในวันถัดไปได้ด้วยครับ
