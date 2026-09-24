@@ -1,3 +1,4 @@
+ตัวอย่างคำสั่ง prompt ที่ใช้กับ claude-secret-mission ในวันที่ 4 ของ CodeLab
 ===
 1. First Project
 ===
