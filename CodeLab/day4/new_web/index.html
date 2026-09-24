@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bizly | ที่ปรึกษาธุรกิจครบวงจร</title>
+  <meta name="description" content="Bizly ช่วยให้ธุรกิจของคุณเติบโตอย่างมั่นคง ด้วยกลยุทธ์ที่ชัดเจนและทีมผู้เชี่ยวชาญ" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: "Noto Sans Thai", ui-sans-serif, system-ui, sans-serif;
+      --color-brand-50: #eff6ff;
+      --color-brand-100: #dbeafe;
+      --color-brand-500: #3b82f6;
+      --color-brand-600: #2563eb;
+      --color-brand-700: #1d4ed8;
+      --color-brand-900: #1e3a8a;
+    }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+</head>
+
+<body class="bg-white font-sans text-slate-700 antialiased">
+
+  <!-- Navbar -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-100 bg-white/85 backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <a href="#home" class="flex items-center gap-2 text-2xl font-extrabold text-brand-900">
+        <span class="grid h-9 w-9 place-items-center rounded-xl bg-brand-600 text-lg text-white">B</span>
+        Bizly
+      </a>
+      <ul class="hidden items-center gap-8 text-sm font-medium md:flex">
+        <li><a href="#home" class="hover:text-brand-600">หน้าแรก</a></li>
+        <li><a href="#services" class="hover:text-brand-600">บริการ</a></li>
+        <li><a href="#portfolio" class="hover:text-brand-600">ผลงาน</a></li>
+        <li><a href="#testimonials" class="hover:text-brand-600">รีวิว</a></li>
+        <li><a href="#contact" class="hover:text-brand-600">ติดต่อ</a></li>
+      </ul>
+      <a href="#contact" class="hidden rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-600/25 transition hover:bg-brand-700 md:inline-block">ขอใบเสนอราคา</a>
+      <button id="menu-btn" class="rounded-lg p-2 md:hidden" aria-label="เปิดเมนู" aria-expanded="false">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden border-t border-slate-100 bg-white px-6 pb-4 md:hidden">
+      <a href="#services" class="block py-3">บริการ</a>
+      <a href="#portfolio" class="block py-3">ผลงาน</a>
+      <a href="#testimonials" class="block py-3">รีวิว</a>
+      <a href="#contact" class="block py-3">ติดต่อ</a>
+      <a href="#contact" class="mt-2 block rounded-full bg-brand-600 py-3 text-center font-semibold text-white">ขอใบเสนอราคา</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="relative overflow-hidden bg-gradient-to-b from-brand-50 to-white pt-32 pb-20 lg:pt-40">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
+        <div class="reveal">
+          <span class="inline-block rounded-full bg-brand-100 px-4 py-1.5 text-sm font-semibold text-brand-700">ที่ปรึกษาธุรกิจครบวงจร</span>
+          <h1 class="mt-6 text-4xl leading-tight font-extrabold text-slate-900 sm:text-5xl lg:text-6xl">
+            ขับเคลื่อนธุรกิจของคุณสู่
+            <span class="text-brand-600">การเติบโตที่ยั่งยืน</span>
+          </h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">
+            เราช่วยวางกลยุทธ์ ปรับปรุงกระบวนการ และสร้างผลลัพธ์ที่วัดได้จริง ด้วยทีมผู้เชี่ยวชาญที่เข้าใจธุรกิจของคุณ
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#contact" class="rounded-full bg-brand-600 px-8 py-3.5 font-semibold text-white shadow-lg shadow-brand-600/30 transition hover:-translate-y-0.5 hover:bg-brand-700">ขอใบเสนอราคาฟรี</a>
+            <a href="#services" class="rounded-full border border-slate-300 bg-white px-8 py-3.5 font-semibold text-slate-700 transition hover:border-brand-600 hover:text-brand-600">ดูบริการของเรา</a>
+          </div>
+        </div>
+        <div class="reveal relative">
+          <img src="images/hero.jpg" alt="ทีมงานกำลังทำงานร่วมกัน" class="aspect-[4/3] w-full rounded-3xl object-cover shadow-2xl" />
+          <div class="absolute -bottom-6 -left-4 hidden rounded-2xl bg-white p-4 shadow-xl sm:block">
+            <p class="text-3xl font-extrabold text-brand-600">98%</p>
+            <p class="text-sm text-slate-500">ลูกค้าพึงพอใจ</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="border-y border-slate-100 bg-white">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 py-12 text-center lg:grid-cols-4">
+        <div class="reveal"><p class="text-4xl font-extrabold text-brand-600">500+</p><p class="mt-1 text-slate-500">โครงการที่สำเร็จ</p></div>
+        <div class="reveal"><p class="text-4xl font-extrabold text-brand-600">12 ปี</p><p class="mt-1 text-slate-500">ประสบการณ์</p></div>
+        <div class="reveal"><p class="text-4xl font-extrabold text-brand-600">80+</p><p class="mt-1 text-slate-500">ผู้เชี่ยวชาญ</p></div>
+        <div class="reveal"><p class="text-4xl font-extrabold text-brand-600">98%</p><p class="mt-1 text-slate-500">ความพึงพอใจ</p></div>
+      </div>
+    </section>
+
+    <!-- About / Highlights -->
+    <section class="py-20">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
+        <img src="images/about.jpg" alt="ทีมกำลังระดมความคิดร่วมกัน" class="reveal aspect-[3/2] w-full rounded-3xl object-cover shadow-xl" />
+        <div class="reveal">
+          <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">ทำไมต้องเลือก Bizly</h2>
+          <p class="mt-4 text-lg text-slate-600">เราทำงานเป็นพันธมิตรระยะยาว ไม่ใช่แค่ที่ปรึกษาที่ส่งรายงานแล้วจบ</p>
+          <ul class="mt-8 space-y-5">
+            <li class="flex gap-4">
+              <span class="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-brand-100 text-brand-600">✓</span>
+              <div><h3 class="font-bold text-slate-900">กลยุทธ์ที่ปรับให้เหมาะกับคุณ</h3><p class="text-slate-600">วิเคราะห์จากข้อมูลจริงของธุรกิจ ไม่ใช้สูตรสำเร็จรูป</p></div>
+            </li>
+            <li class="flex gap-4">
+              <span class="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-brand-100 text-brand-600">✓</span>
+              <div><h3 class="font-bold text-slate-900">ทีมผู้เชี่ยวชาญเฉพาะด้าน</h3><p class="text-slate-600">จับคู่ผู้เชี่ยวชาญที่ตรงกับอุตสาหกรรมของคุณ</p></div>
+            </li>
+            <li class="flex gap-4">
+              <span class="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-brand-100 text-brand-600">✓</span>
+              <div><h3 class="font-bold text-slate-900">วัดผลได้ชัดเจน</h3><p class="text-slate-600">ตั้งตัวชี้วัดร่วมกันและรายงานความคืบหน้าสม่ำเสมอ</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="bg-slate-50 py-20">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="font-semibold text-brand-600">บริการของเรา</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl">โซลูชันที่ครอบคลุมทุกความต้องการ</h2>
+        </div>
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="reveal rounded-2xl bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+            <div class="grid h-12 w-12 place-items-center rounded-xl bg-brand-100 text-2xl">📈</div>
+            <h3 class="mt-5 text-xl font-bold text-slate-900">วางกลยุทธ์ธุรกิจ</h3>
+            <p class="mt-2 text-slate-600">กำหนดทิศทาง เป้าหมาย และแผนปฏิบัติที่นำไปใช้ได้จริง</p>
+          </article>
+          <article class="reveal rounded-2xl bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+            <div class="grid h-12 w-12 place-items-center rounded-xl bg-brand-100 text-2xl">⚙️</div>
+            <h3 class="mt-5 text-xl font-bold text-slate-900">ปรับปรุงกระบวนการ</h3>
+            <p class="mt-2 text-slate-600">ลดขั้นตอนที่ซ้ำซ้อน เพิ่มประสิทธิภาพและลดต้นทุน</p>
+          </article>
+          <article class="reveal rounded-2xl bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+            <div class="grid h-12 w-12 place-items-center rounded-xl bg-brand-100 text-2xl">📊</div>
+            <h3 class="mt-5 text-xl font-bold text-slate-900">วิเคราะห์ข้อมูล</h3>
+            <p class="mt-2 text-slate-600">เปลี่ยนข้อมูลให้เป็นข้อมูลเชิงลึกเพื่อการตัดสินใจที่แม่นยำ</p>
+          </article>
+          <article class="reveal rounded-2xl bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+            <div class="grid h-12 w-12 place-items-center rounded-xl bg-brand-100 text-2xl">💻</div>
+            <h3 class="mt-5 text-xl font-bold text-slate-900">ทรานส์ฟอร์มดิจิทัล</h3>
+            <p class="mt-2 text-slate-600">นำเทคโนโลยีมาปรับใช้กับองค์กรอย่างเหมาะสมและปลอดภัย</p>
+          </article>
+          <article class="reveal rounded-2xl bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+            <div class="grid h-12 w-12 place-items-center rounded-xl bg-brand-100 text-2xl">🎓</div>
+            <h3 class="mt-5 text-xl font-bold text-slate-900">อบรมและพัฒนาทีม</h3>
+            <p class="mt-2 text-slate-600">เสริมทักษะบุคลากรให้พร้อมรับการเปลี่ยนแปลง</p>
+          </article>
+          <article class="reveal rounded-2xl bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+            <div class="grid h-12 w-12 place-items-center rounded-xl bg-brand-100 text-2xl">🤝</div>
+            <h3 class="mt-5 text-xl font-bold text-slate-900">ที่ปรึกษาต่อเนื่อง</h3>
+            <p class="mt-2 text-slate-600">ดูแลและให้คำแนะนำหลังโครงการเสร็จสิ้น</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-20">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="font-semibold text-brand-600">ผลงานของเรา</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl">ตัวอย่างโครงการที่ผ่านมา</h2>
+        </div>
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <figure class="reveal group relative overflow-hidden rounded-2xl">
+            <img src="images/work1.jpg" alt="ออกแบบสำนักงานสมัยใหม่" class="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-105" />
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900/85 to-transparent p-5 text-white"><p class="font-bold">ปรับโครงสร้างองค์กร</p><p class="text-sm text-slate-200">ธุรกิจอสังหาริมทรัพย์</p></figcaption>
+          </figure>
+          <figure class="reveal group relative overflow-hidden rounded-2xl">
+            <img src="images/work2.jpg" alt="แดชบอร์ดวิเคราะห์ข้อมูล" class="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-105" />
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900/85 to-transparent p-5 text-white"><p class="font-bold">ระบบแดชบอร์ดข้อมูล</p><p class="text-sm text-slate-200">ธุรกิจค้าปลีก</p></figcaption>
+          </figure>
+          <figure class="reveal group relative overflow-hidden rounded-2xl">
+            <img src="images/work3.jpg" alt="วางแผนงานบนโต๊ะทำงาน" class="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-105" />
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900/85 to-transparent p-5 text-white"><p class="font-bold">วางแผนกลยุทธ์ 3 ปี</p><p class="text-sm text-slate-200">ธุรกิจการผลิต</p></figcaption>
+          </figure>
+          <figure class="reveal group relative overflow-hidden rounded-2xl">
+            <img src="images/work4.jpg" alt="การประชุมปรึกษางาน" class="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-105" />
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900/85 to-transparent p-5 text-white"><p class="font-bold">พัฒนาผลิตภัณฑ์ดิจิทัล</p><p class="text-sm text-slate-200">ธุรกิจบริการ</p></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="bg-brand-50 py-20">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="font-semibold text-brand-600">เสียงจากลูกค้า</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl">ลูกค้าของเราพูดถึงเราว่าอย่างไร</h2>
+        </div>
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <blockquote class="reveal rounded-2xl bg-white p-8 shadow-sm">
+            <p class="text-amber-400">★★★★★</p>
+            <p class="mt-4 text-slate-600">“ทีมเข้าใจปัญหาของเราอย่างลึกซึ้ง และแนะนำแนวทางที่ทำได้จริง ยอดขายเพิ่มขึ้นภายใน 6 เดือน”</p>
+            <footer class="mt-6 flex items-center gap-3">
+              <img src="images/person1.jpg" alt="ลูกค้า" class="h-12 w-12 rounded-full object-cover" />
+              <div><p class="font-bold text-slate-900">คุณสมหญิง ใจดี</p><p class="text-sm text-slate-500">ผู้จัดการทั่วไป</p></div>
+            </footer>
+          </blockquote>
+          <blockquote class="reveal rounded-2xl bg-white p-8 shadow-sm">
+            <p class="text-amber-400">★★★★★</p>
+            <p class="mt-4 text-slate-600">“ทำงานมืออาชีพ ตรงเวลา และรายงานผลชัดเจน แนะนำสำหรับองค์กรที่ต้องการเปลี่ยนแปลง”</p>
+            <footer class="mt-6 flex items-center gap-3">
+              <img src="images/person2.jpg" alt="ลูกค้า" class="h-12 w-12 rounded-full object-cover" />
+              <div><p class="font-bold text-slate-900">คุณวิชัย มั่นคง</p><p class="text-sm text-slate-500">กรรมการผู้จัดการ</p></div>
+            </footer>
+          </blockquote>
+          <blockquote class="reveal rounded-2xl bg-white p-8 shadow-sm">
+            <p class="text-amber-400">★★★★★</p>
+            <p class="mt-4 text-slate-600">“ประทับใจการอบรมทีมงาน ทุกคนนำความรู้ไปใช้ได้ทันที ประหยัดต้นทุนไปมาก”</p>
+            <footer class="mt-6 flex items-center gap-3">
+              <img src="images/person3.jpg" alt="ลูกค้า" class="h-12 w-12 rounded-full object-cover" />
+              <div><p class="font-bold text-slate-900">คุณนภา สุขสันต์</p><p class="text-sm text-slate-500">ผู้อำนวยการฝ่ายปฏิบัติการ</p></div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA banner -->
+    <section class="relative isolate overflow-hidden py-24">
+      <img src="images/cta.jpg" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover" />
+      <div class="absolute inset-0 -z-10 bg-brand-900/85"></div>
+      <div class="reveal mx-auto max-w-3xl px-6 text-center text-white">
+        <p class="font-semibold text-brand-100">ข้อเสนอพิเศษ</p>
+        <h2 class="mt-2 text-3xl font-extrabold sm:text-4xl">ปรึกษาครั้งแรกฟรี ไม่มีค่าใช้จ่าย</h2>
+        <p class="mt-4 text-lg text-brand-100">นัดหมายพูดคุยกับผู้เชี่ยวชาญของเรา 60 นาที เพื่อประเมินธุรกิจและวางแนวทางเบื้องต้น</p>
+        <a href="#contact" class="mt-8 inline-block rounded-full bg-white px-8 py-3.5 font-semibold text-brand-700 shadow-lg transition hover:-translate-y-0.5">นัดหมายเลย</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2">
+        <div class="reveal">
+          <p class="font-semibold text-brand-600">ติดต่อเรา</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl">พร้อมเริ่มต้นกับเราแล้วหรือยัง</h2>
+          <p class="mt-4 text-lg text-slate-600">กรอกแบบฟอร์มเพื่อขอใบเสนอราคา ทีมงานจะติดต่อกลับภายใน 1 วันทำการ</p>
+          <ul class="mt-8 space-y-4">
+            <li class="flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-100">📞</span> 02-123-4567</li>
+            <li class="flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-100">✉️</span> hello@bizly.example</li>
+            <li class="flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-100">📍</span> 123 ถนนตัวอย่าง กรุงเทพมหานคร 10110</li>
+          </ul>
+        </div>
+
+        <form id="contact-form" class="reveal space-y-5 rounded-3xl bg-slate-50 p-8 shadow-sm" novalidate>
+          <div>
+            <label for="name" class="mb-1 block text-sm font-semibold">ชื่อ-นามสกุล</label>
+            <input id="name" name="name" type="text" required class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100" />
+          </div>
+          <div>
+            <label for="email" class="mb-1 block text-sm font-semibold">อีเมล</label>
+            <input id="email" name="email" type="email" required class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100" />
+          </div>
+          <div>
+            <label for="message" class="mb-1 block text-sm font-semibold">รายละเอียดที่ต้องการ</label>
+            <textarea id="message" name="message" rows="4" required class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100"></textarea>
+          </div>
+          <p id="form-msg" class="hidden rounded-xl px-4 py-3 text-sm font-medium" role="status"></p>
+          <button type="submit" class="w-full rounded-full bg-brand-600 py-3.5 font-semibold text-white shadow-lg shadow-brand-600/25 transition hover:bg-brand-700">ส่งข้อความ</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm md:flex-row">
+      <p>© 2026 Bizly. สงวนลิขสิทธิ์</p>
+      <p>ภาพประกอบจาก <a href="https://unsplash.com" target="_blank" rel="noopener" class="underline hover:text-white">Unsplash</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // เมนูมือถือ
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('hidden') === false;
+      menuBtn.setAttribute('aria-expanded', String(open));
+    });
+    mobileMenu.querySelectorAll('a').forEach((a) =>
+      a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      })
+    );
+
+    // Fade-in ตอนเลื่อนหน้า
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('show'); observer.unobserve(e.target); }
+      }),
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+    // ฟอร์มติดต่อ (จำลองการส่ง)
+    const form = document.getElementById('contact-form');
+    const msg = document.getElementById('form-msg');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      msg.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
+      if (!name || !emailOk || !message) {
+        msg.textContent = 'กรุณากรอกข้อมูลให้ครบถ้วนและอีเมลให้ถูกต้อง';
+        msg.classList.add('bg-red-100', 'text-red-800');
+        return;
+      }
+      msg.textContent = 'ส่งข้อความเรียบร้อยแล้ว ทีมงานจะติดต่อกลับโดยเร็วที่สุด';
+      msg.classList.add('bg-green-100', 'text-green-800');
+      form.reset();
+    });
+  </script>
+</body>
+</html>
