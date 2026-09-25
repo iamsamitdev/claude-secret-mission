@@ -108,17 +108,13 @@ ul[role='alert'] {
 }
 
 /* รายการ Loan */
-section > ul {
+.loan-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-
-section + section {
-  margin-top: 8px;
 }
 
 .loan-item {
@@ -194,4 +190,244 @@ section + section {
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 8px;
+}
+
+/* v2: ปุ่มในหัวเรื่อง (ธีม + ออกจากระบบ) */
+.header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* v2: หน้าเข้าสู่ระบบ คอลัมน์เดียวทุกขนาดจอ (ต้องอยู่หลัง media query ของ form) */
+.login-form {
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  grid-template-columns: 1fr;
+}
+
+/* v2: แผงย้ายข้อมูลเดิม */
+.legacy-import {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--outstanding-border);
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+}
+
+.legacy-import h2,
+.legacy-import p {
+  margin: 0;
+}
+
+.legacy-import ul {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.legacy-import p[role='alert'] {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--overdue-border);
+  background: var(--overdue-bg);
+  color: var(--overdue);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+
+/* ===== v2.1: แท็บ + สีสัน + มือถือเป็นหลัก ===== */
+
+main {
+  gap: 16px;
+}
+
+/* หัวเรื่อง: แถบไล่สี */
+.app-header {
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: var(--header-bg);
+  box-shadow: var(--shadow);
+}
+
+.app-header h1 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.app-header button {
+  min-height: 44px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.app-header button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  filter: none;
+}
+
+/* ปุ่มหลัก: ไล่สี ตัวอักษรขาว */
+button[type='submit'],
+.mark-returned {
+  color: #fff;
+  background: var(--primary-bg);
+  border-color: transparent;
+}
+
+/* การ์ดฟอร์ม/แผงต่าง ๆ */
+form,
+.legacy-import,
+.empty-state {
+  box-shadow: var(--shadow);
+}
+
+form h2 {
+  color: var(--add);
+}
+
+.tab-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.empty-state {
+  padding: 28px 16px;
+  text-align: center;
+  background: var(--surface);
+  border: 2px dashed var(--border);
+  border-radius: 16px;
+}
+
+/* แถบแท็บ */
+.tab-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  padding: 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.tab {
+  --tab-solid: var(--add-solid);
+  --tab-solid-text: var(--add-solid-text);
+  --tab-soft: var(--add-bg);
+  --tab-ink: var(--add);
+  --tab-line: var(--add-border);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 56px;
+  padding: 6px 4px;
+  font-size: 0.8125rem;
+  line-height: 1.25;
+  color: var(--tab-ink);
+  background: var(--tab-soft);
+  border: 1px solid var(--tab-line);
+  border-radius: 12px;
+}
+
+.tab-overdue {
+  --tab-solid: var(--overdue-solid);
+  --tab-solid-text: var(--overdue-solid-text);
+  --tab-soft: var(--overdue-bg);
+  --tab-ink: var(--overdue);
+  --tab-line: var(--overdue-border);
+}
+
+.tab-outstanding {
+  --tab-solid: var(--outstanding-solid);
+  --tab-solid-text: var(--outstanding-solid-text);
+  --tab-soft: var(--outstanding-bg);
+  --tab-ink: var(--outstanding);
+  --tab-line: var(--outstanding-border);
+}
+
+.tab-returned {
+  --tab-solid: var(--returned-solid);
+  --tab-solid-text: var(--returned-solid-text);
+  --tab-soft: var(--returned-bg);
+  --tab-ink: var(--returned);
+  --tab-line: var(--returned-border);
+}
+
+.tab.is-active {
+  color: var(--tab-solid-text);
+  background: var(--tab-solid);
+  border-color: var(--tab-solid);
+  font-weight: 700;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.22);
+}
+
+.tab-count {
+  min-width: 1.75em;
+  padding: 0 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--tab-ink);
+  background: var(--surface);
+  border: 1px solid var(--tab-line);
+  border-radius: 999px;
+}
+
+/* การ์ด Loan: เอียงสีตามสถานะ (ยังมีข้อความสถานะกำกับเสมอ) */
+.loan-item {
+  --tone-bg: var(--surface);
+  background: linear-gradient(135deg, var(--tone-bg) 0%, var(--surface) 60%);
+  box-shadow: var(--shadow);
+}
+
+.loan-overdue {
+  --tone-bg: var(--overdue-bg);
+}
+
+.loan-outstanding {
+  --tone-bg: var(--outstanding-bg);
+}
+
+.loan-returned {
+  --tone-bg: var(--returned-bg);
+}
+
+/* มือถือ: แถบแท็บติดขอบล่างให้กดด้วยนิ้วโป้ง */
+@media (max-width: 639px) {
+  main {
+    padding-bottom: calc(96px + env(safe-area-inset-bottom));
+  }
+
+  .tab-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    border-width: 1px 0 0;
+    border-radius: 18px 18px 0 0;
+    padding: 6px 6px calc(6px + env(safe-area-inset-bottom));
+  }
+}
+
+/* จอกว้าง: แถบแท็บอยู่ใต้หัวเรื่อง ตัวอักษรใหญ่ขึ้น เรียงข้อความและตัวเลขในบรรทัดเดียว */
+@media (min-width: 640px) {
+  .tab {
+    flex-direction: row;
+    gap: 8px;
+    min-height: 48px;
+    font-size: 1rem;
+  }
 }

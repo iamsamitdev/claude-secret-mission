@@ -1,12 +1,31 @@
 :root {
   --text: #3f3a48;
   --text-h: #08060d;
-  --bg: #fff;
-  --surface: #f8f7fa;
-  --border: #d8d6dc;
+  --bg: #faf7ff; /* พื้นช่องกรอก */
+  --surface: #fff;
+  --border: #d9d2ea;
   --accent: #6d28d9;
   --accent-text: #fff;
   --focus: #6d28d9;
+
+  /* v2.1 สีสัน: พื้นหลังหน้า, แถบหัวเรื่อง, ปุ่มหลัก */
+  --page-bg: linear-gradient(160deg, #ede9fe 0%, #fce7f3 48%, #e0f2fe 100%);
+  --header-bg: linear-gradient(135deg, #6d28d9 0%, #db2777 100%);
+  --primary-bg: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+  --shadow: 0 4px 14px rgba(76, 29, 149, 0.12);
+
+  /* สีเต็มของแท็บที่เลือก (ตัวอักษรบนสีเต็มต้องคอนทราสต์พอ) */
+  --overdue-solid: #dc2626;
+  --overdue-solid-text: #fff;
+  --outstanding-solid: #f59e0b;
+  --outstanding-solid-text: #3b1d00;
+  --returned-solid: #047857;
+  --returned-solid-text: #fff;
+  --add-solid: #7c3aed;
+  --add-solid-text: #fff;
+  --add: #5b21b6;
+  --add-bg: #ede9fe;
+  --add-border: #a78bfa;
 
   /* สถานะ: ใช้คู่กับข้อความเสมอ ไม่พึ่งสีอย่างเดียว */
   --overdue: #b42318;
@@ -40,12 +59,21 @@
   color-scheme: dark;
   --text: #c4c7d0;
   --text-h: #f3f4f6;
-  --bg: #16171d;
-  --surface: #1f2028;
-  --border: #363845;
+  --bg: #171826;
+  --surface: #232436;
+  --border: #3d3f57;
   --accent: #c4a1ff;
   --accent-text: #16171d;
   --focus: #c4a1ff;
+
+  --page-bg: linear-gradient(160deg, #1e1b4b 0%, #2e1065 52%, #0f172a 100%);
+  --header-bg: linear-gradient(135deg, #5b21b6 0%, #be185d 100%);
+  --primary-bg: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+
+  --add: #d8b4fe;
+  --add-bg: rgba(167, 139, 250, 0.16);
+  --add-border: #a78bfa;
 
   --overdue: #fda29b;
   --overdue-bg: rgba(240, 68, 56, 0.16);
@@ -60,6 +88,9 @@
 
 body {
   margin: 0;
+  min-height: 100svh;
+  background: var(--page-bg);
+  background-attachment: fixed;
 }
 
 #root {
