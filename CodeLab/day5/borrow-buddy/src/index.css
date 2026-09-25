@@ -1,0 +1,94 @@
+:root {
+  --text: #3f3a48;
+  --text-h: #08060d;
+  --bg: #fff;
+  --surface: #f8f7fa;
+  --border: #d8d6dc;
+  --accent: #6d28d9;
+  --accent-text: #fff;
+  --focus: #6d28d9;
+
+  /* สถานะ: ใช้คู่กับข้อความเสมอ ไม่พึ่งสีอย่างเดียว */
+  --overdue: #b42318;
+  --overdue-bg: #fee4e2;
+  --overdue-border: #f04438;
+  --outstanding: #93370d;
+  --outstanding-bg: #fef0c7;
+  --outstanding-border: #f79009;
+  --returned: #05603a;
+  --returned-bg: #d1fadf;
+  --returned-border: #12b76a;
+
+  --sans: system-ui, 'Segoe UI', 'Noto Sans Thai', Roboto, sans-serif;
+
+  font: 16px/1.6 var(--sans);
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ธีมควบคุมด้วย data-theme บน <html> (ตั้งโดย App.jsx จากค่าที่จำไว้หรือค่าของระบบ) */
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --text: #c4c7d0;
+  --text-h: #f3f4f6;
+  --bg: #16171d;
+  --surface: #1f2028;
+  --border: #363845;
+  --accent: #c4a1ff;
+  --accent-text: #16171d;
+  --focus: #c4a1ff;
+
+  --overdue: #fda29b;
+  --overdue-bg: rgba(240, 68, 56, 0.16);
+  --overdue-border: #f97066;
+  --outstanding: #fec84b;
+  --outstanding-bg: rgba(247, 144, 9, 0.16);
+  --outstanding-border: #fdb022;
+  --returned: #6ce9a6;
+  --returned-bg: rgba(18, 183, 106, 0.16);
+  --returned-border: #32d583;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  color: var(--text-h);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.75rem;
+}
+
+p {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}

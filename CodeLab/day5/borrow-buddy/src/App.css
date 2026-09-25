@@ -1,0 +1,197 @@
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* หัวเรื่อง + ปุ่มสลับธีม */
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* ฟอร์มและช่องกรอก */
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+input {
+  font: inherit;
+  color: var(--text-h);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  min-height: 44px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+form h2,
+form ul[role='alert'],
+form .form-actions {
+  grid-column: 1 / -1;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (min-width: 560px) {
+  form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ปุ่ม: พื้นที่กดอย่างน้อย 44px สำหรับมือถือ */
+button {
+  font: inherit;
+  font-weight: 500;
+  min-height: 44px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  cursor: pointer;
+}
+
+button[type='submit'],
+.mark-returned {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
+
+/* ข้อความเตือนและข้อผิดพลาด */
+main > p[role='alert'] {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--outstanding-border);
+  background: var(--outstanding-bg);
+  color: var(--outstanding);
+}
+
+ul[role='alert'] {
+  margin: 0;
+  padding: 8px 12px 8px 28px;
+  border-radius: 8px;
+  border: 1px solid var(--overdue-border);
+  background: var(--overdue-bg);
+  color: var(--overdue);
+}
+
+/* รายการ Loan */
+section > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+section + section {
+  margin-top: 8px;
+}
+
+.loan-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left-width: 6px;
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+}
+
+.loan-item > strong {
+  font-size: 1.125rem;
+  color: var(--text-h);
+}
+
+.loan-overdue {
+  border-left-color: var(--overdue-border);
+}
+
+.loan-outstanding {
+  border-left-color: var(--outstanding-border);
+}
+
+.loan-returned {
+  border-left-color: var(--returned-border);
+}
+
+/* ป้ายสถานะ: มีข้อความกำกับเสมอ สีเป็นตัวช่วย */
+.status {
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 1px solid;
+  font-weight: 600;
+}
+
+.status-overdue {
+  color: var(--overdue);
+  background: var(--overdue-bg);
+  border-color: var(--overdue-border);
+}
+
+.status-outstanding {
+  color: var(--outstanding);
+  background: var(--outstanding-bg);
+  border-color: var(--outstanding-border);
+}
+
+.status-returned {
+  color: var(--returned);
+  background: var(--returned-bg);
+  border-color: var(--returned-border);
+}
+
+.return-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.return-row label {
+  flex: 1 1 180px;
+}
+
+.loan-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
